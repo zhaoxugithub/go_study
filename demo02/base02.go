@@ -16,6 +16,12 @@ func arrayTest() {
 
 	modifyValue2(&arr_1)
 	fmt.Println(arr_1)
+
+	var arr_2 = [4]int{}
+	fmt.Println(arr_2)
+
+	var arr_3 [5]int
+	fmt.Println(arr_3)
 }
 
 func modifyValue(a [5]int) {
