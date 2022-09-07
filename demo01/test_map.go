@@ -22,7 +22,6 @@ func testMap() {
 	for key, value := range map1 {
 		fmt.Printf("key = %s,value = %s\n", key, value)
 	}
-
 }
 
 func main() {
