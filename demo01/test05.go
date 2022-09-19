@@ -22,13 +22,13 @@ func main() {
 	arrr := []int{2, 3, 4, 5, 6}
 	moddify222(arrr)
 
-	//申明的数数组
+	//申明的数组
 	arrr1 := [...]int{3, 4, 5, 7, 8}
 
 	//数组传参的实参和形参个数要保持一致
 	modify1(arrr1)
-	fmt.Println(arrr)
+	fmt.Println(arrr1)
 
 	modify22(&arrr1)
-	fmt.Println(arrr)
+	fmt.Println(arrr1)
 }

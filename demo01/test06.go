@@ -11,8 +11,8 @@ func goFunc(i int) {
 
 func main() {
 	for i := 0; i < 10000; i++ {
-		//go goFunc(i)
-		fmt.Println(i)
+		go goFunc(i)
+		//fmt.Println(i)
 	}
 	time.Sleep(time.Second)
 }

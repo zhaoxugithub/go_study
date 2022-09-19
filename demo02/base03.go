@@ -8,18 +8,14 @@ func sliceTest() {
 	//切片的申明
 	var sli_1 []int
 	fmt.Printf("len=%d cap=%d slice=%v\n", len(sli_1), cap(sli_1), sli_1)
-
 	var sli_2 = []int{}
 	fmt.Printf("len=%d cap=%d slice=%v\n", len(sli_2), cap(sli_2), sli_2)
-
 	var sli_3 = []int{3, 4, 5, 6, 7}
 	fmt.Printf("len=%d cap=%d slice=%v\n", len(sli_3), cap(sli_3), sli_3)
 	sli_3 = append(append(append(sli_3, 6), 7), 9)
 	fmt.Printf("len=%d cap=%d slice=%v\n", len(sli_3), cap(sli_3), sli_3)
-
 	var sli_4 = make([]int, 5, 5)
 	fmt.Printf("len=%d cap=%d slice=%v\n", len(sli_4), cap(sli_4), sli_4)
-
 	sli_5 := make([]int, 9, 10)
 	fmt.Printf("len=%d cap=%d slice=%v\n", len(sli_5), cap(sli_5), sli_5)
 }
@@ -59,7 +55,8 @@ func sliceDelete() {
 	sli = append(sli[:3], sli[3+2:]...)
 	fmt.Printf("len=%d cap=%d slice=%v\n", len(sli), cap(sli), sli)
 }
-
 func main() {
-	sliceDelete()
+	sliceTest()
+	//sliceSub()
+	//sliceDelete()
 }

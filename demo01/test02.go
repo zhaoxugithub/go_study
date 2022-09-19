@@ -23,12 +23,15 @@ func simpleVar() {
 	var f1, f2, f3 = 1, 2, 3
 	println(f2, f1, f3)
 
+	//自己进行类型判断
 	sd := 12
 	println(sd)
 
 	sd1, sd2, s3 := 1, 2, 3
 	println(sd1, sd2, s3)
 
+	ss1, ss2, ss3 := 2, "sssss", 4
+	println(ss3, ss2, ss1)
 }
 
 func main() {

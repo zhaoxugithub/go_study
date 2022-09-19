@@ -14,6 +14,7 @@ func arrayTest() {
 	modifyValue(arr_1)
 	fmt.Println(arr_1)
 
+	//传递引用变量
 	modifyValue2(&arr_1)
 	fmt.Println(arr_1)
 
