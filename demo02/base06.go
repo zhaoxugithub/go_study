@@ -38,12 +38,10 @@ func forSliceTest() {
 	for i := range person {
 		fmt.Printf("person[%d] = %v\n", i, person[i])
 	}
-
 	//通过下标遍历
 	for i := 0; i < len(person); i++ {
 		fmt.Printf("person[%d] = %v\n", i, person[i])
 	}
-
 	//通过空白符遍历
 	for _, name := range person {
 		fmt.Printf("person = %v\n", name)

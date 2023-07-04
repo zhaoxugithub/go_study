@@ -56,7 +56,7 @@ func sliceDelete() {
 	fmt.Printf("len=%d cap=%d slice=%v\n", len(sli), cap(sli), sli)
 }
 func main() {
-	sliceTest()
-	//sliceSub()
+	//sliceTest()
+	sliceSub()
 	//sliceDelete()
 }

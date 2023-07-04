@@ -23,7 +23,7 @@ func simpleVar() {
 	var f1, f2, f3 = 1, 2, 3
 	println(f2, f1, f3)
 
-	//自己进行类型判断
+	//自己进行类型判断这种方法只能进行一次赋值
 	sd := 12
 	println(sd)
 

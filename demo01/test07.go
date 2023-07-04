@@ -9,8 +9,8 @@ func initSlice() {
 	fmt.Println(ints)
 	fmt.Println(slice1)
 
-	//ss := make([]int, 4)
-	//fmt.Println(slice2)
+	ss := make([]int, 4)
+	fmt.Println(ss)
 
 	//6 表示切片长度，10表示最大的容量
 	slice3 := make([]int, 6, 10)
@@ -28,11 +28,10 @@ func addEle() {
 }
 
 func main() {
-	//for i := 0; i < 1000; i++ {
-	//	//创建线程
-	//	go addEle()
-	//}
-	//fmt.Println(a)
-
-	initSlice()
+	for i := 0; i < 1000; i++ {
+		//	//创建线程
+		go addEle()
+	}
+	fmt.Println(a)
+	//initSlice()
 }

@@ -7,14 +7,11 @@ import (
 )
 
 func goFunc() {
-
 	fmt.Println("main start...")
 	go func() {
 		fmt.Println("thread start ...")
 	}()
-
 	time.Sleep(1 * time.Second)
-
 	fmt.Println("main end...")
 }
 
@@ -22,16 +19,12 @@ func goFunc() {
 func chanTest() {
 	//申明不带缓冲管道
 	ch1 := make(chan string)
-
 	//申明带10个缓冲的管道
 	ch2 := make(chan string, 10)
-
 	//申明只读管道
 	ch3 := make(<-chan string)
-
 	//申明只写管道
 	ch4 := make(chan<- string)
-
 	fmt.Println(ch1)
 	fmt.Println(ch2)
 	fmt.Println(ch3)
@@ -41,11 +34,9 @@ func chanTest() {
 // 如果管道不带缓冲，赋值之后就会阻塞
 //不带缓冲的通道，进和出都会阻塞。
 func chanExeNoBuffer() {
-
 	fmt.Println("main start..")
 	//申明一个无缓冲的管道
 	ch := make(chan string)
-
 	ch <- "a"
 	fmt.Println("管道之后就会被阻。。。。。")
 	go func() {
@@ -58,11 +49,9 @@ func chanExeNoBuffer() {
 
 // 带缓冲的通道，进一次长度 +1，出一次长度 -1，如果长度等于缓冲长度时，再进就会阻塞。
 func chanExeBuffer() {
-
 	fmt.Println("main start..")
 	//申明一个无缓冲的管道
 	ch := make(chan string, 1)
-
 	ch <- "a"
 	fmt.Println("管道之后就会被阻。。。。。")
 	go func() {
@@ -90,13 +79,11 @@ func customer(ch chan string) {
 }
 
 func main() {
-	fmt.Println("main start ...")
-	ch := make(chan string, 3)
-
-	go producer(ch)
-	go customer(ch)
-
-	time.Sleep(1 * time.Minute)
-
-	fmt.Println("main end...")
+	//fmt.Println("main start ...")
+	//ch := make(chan string, 3)
+	//go producer(ch)
+	//go customer(ch)
+	//time.Sleep(1 * time.Minute)
+	//fmt.Println("main end...")
+	chanExeBuffer()
 }

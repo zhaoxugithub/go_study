@@ -23,6 +23,12 @@ func arrayTest() {
 
 	var arr_3 [5]int
 	fmt.Println(arr_3)
+
+	arr_4 := [100]int{}
+	arr_4[0] = 1
+	arr_4[1] = 2
+	fmt.Println(arr_4)
+
 }
 
 func modifyValue(a [5]int) {
