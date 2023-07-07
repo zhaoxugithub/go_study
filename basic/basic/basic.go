@@ -62,6 +62,7 @@ func calcTriangle(a, b int) int {
 
 func consts() {
 	const (
+		// 常量定义如果不指定数据类型,默认是文本类型
 		filename = "abc.txt"
 		a, b     = 3, 4
 	)
@@ -73,7 +74,7 @@ func consts() {
 func enums() {
 
 	const (
-		// 枚举
+		// 枚举,iota表示的这个是自增值
 		cpp = iota
 		_
 		python
