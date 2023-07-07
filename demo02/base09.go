@@ -21,14 +21,12 @@ func producer1(ch chan string) {
 	ch <- "d"
 	fmt.Println("producer end")
 }
-
 func customer1(ch chan string) {
 	for {
 		msg := <-ch
 		fmt.Println(msg)
 	}
 }
-
 func main() {
 	fmt.Println("main start")
 	ch := make(chan string, 1)
