@@ -80,5 +80,6 @@ func deleteMap() {
 }
 
 func main() {
-	deleteMap()
+	initMap()
+	//deleteMap()
 }

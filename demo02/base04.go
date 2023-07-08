@@ -71,10 +71,12 @@ func test() {
 	res.Message = "success"
 
 	//序列化
+	//将对象转成json
 	jsons, errs := json.Marshal(res)
 	if errs != nil {
 		fmt.Println("json marshal error:", errs)
 	}
+	//将json转成str
 	fmt.Println("json data :", string(jsons))
 
 	//反序列化
