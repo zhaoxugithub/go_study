@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"reflect"
+)
 
 /**
  *ClassName arrays2
@@ -9,6 +12,11 @@ import "fmt"
  *Date 2023-07-08:15:19
  *Version 1.0
  **/
+
+func getDataType(data interface{}) string {
+	val := reflect.ValueOf(data)
+	return val.Kind().String()
+}
 
 func initArray1() {
 	// 定义数组
@@ -19,7 +27,7 @@ func initArray1() {
 	arr1[3] = 40
 	arr1[4] = 50
 	//arr1[5] = 60 报错
-	fmt.Println(arr1)
+	fmt.Printf("type=%v,arr=%v\n", getDataType(arr1), arr1)
 }
 
 func initArray2() {
@@ -31,7 +39,7 @@ func initArray2() {
 	arr1[3] = 40
 	arr1[4] = 50
 	//arr1[5] = 60
-	fmt.Println(arr1)
+	fmt.Printf("type=%v,arr=%v\n", getDataType(arr1), arr1)
 }
 
 func initArray3() {
@@ -43,9 +51,10 @@ func initArray3() {
 	arr1[3] = 40
 	arr1[4] = 50
 	//arr1[5] = 60
-	fmt.Println(arr1)
+	fmt.Printf("type=%v,arr=%v\n", getDataType(arr1), arr1)
 }
 
+// 这种是初始化切片
 func initArray4() {
 	// 定义数组
 	arr1 := make([]int, 10)
@@ -55,12 +64,16 @@ func initArray4() {
 	arr1[3] = 40
 	arr1[4] = 50
 	//arr1[5] = 60
-	fmt.Println(arr1)
+	fmt.Printf("type=%v,arr=%v\n", getDataType(arr1), arr1)
 }
 
-func main() {
+func initArray() {
 	initArray1()
 	initArray2()
 	initArray3()
 	initArray4()
+}
+
+func main() {
+	initArray()
 }
